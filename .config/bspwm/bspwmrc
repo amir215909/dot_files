@@ -1,5 +1,10 @@
 #! /bin/sh
 
+
+### fix jetbrains ides ###
+bspc config focus_follows_pointer false
+wmname LG3D
+
 ~/.config/polybar/polybar.sh &
 
 feh --randomize --bg-fill ~/Pictures/Wallpaper/
@@ -33,23 +38,28 @@ bspc rule -a Google-chrome desktop='^1' focus=on follow=on
 #Browsers Rule
 bspc rule -a Termite desktop='^2' focus=on follow=on
 
+#Editors + IDES
+bspc rule -a code-oss desktop='^3' follow=on focus=on
+bspc rule -a jetbrains-clion desktop='^3' follow=on focus=on state=floating
+bspc rule -a vscodium  desktop='^3' follow=on focus=on
+bspc rule -a VSCodium desktop='^3' follow=on focus=on
+
 #File Managers
-bspc rule -a dolphin desktop='^3' focus=on follow=on
-bspc rule -a Thunar desktop='^3' focus=on follow=on
+bspc rule -a dolphin desktop='^4' focus=on follow=on
+bspc rule -a Thunar desktop='^4' focus=on follow=on
 
 #Messengers
-bspc rule -a TelegramDesktop desktop='^4' focus=on follow=on state=fullscreen
-bspc rule -a "discord" desktop='^4' focus=on follow=on
+bspc rule -a TelegramDesktop desktop='^6' focus=on follow=on state=fullscreen
+bspc rule -a "discord" desktop='^6' focus=on follow=on
 
 #Documents
 bspc rule -a Zathura desktop='^5' focus=on state=tiled follow=on
+bspc rule -a okular desktop='^5' focus=on state=fullscreen follow=on
 
 #Media Players
-bspc rule -a vlc desktop='^6' follow=on focus=on
-#bspc rule -a "spotify" desktop='6'
-bspc rule -a Spotify desktop='^6' focus=on follow=on 
-bspc rule -a mpv desktop='6'
-bspc rule -a code-oss desktop='^3' follow=on focus=on
+bspc rule -a vlc desktop='^9' follow=on focus=on
+bspc rule -a *:Spotify desktop='^9' focus=on follow=on 
+bspc rule -a mpv desktop='9'
 #bspc rule -a feh state=floating follow=on
 #bspc rule -a ffplay state=floating sticky=on
 

@@ -35,7 +35,7 @@ border-left-size = 0
 border-color = #000000
 
 padding-left = 0
-padding-right = 0
+padding-right = 3
 
 module-margin-left = 2
 module-margin-right = 1
@@ -47,7 +47,7 @@ font-3 = "FontAwesome:size=13;0"
 
 modules-left = bspwm spotify
 modules-center = date
-modules-right = wlan netspeed rec eth memory pulseaudio backlight-acpi battery line powermenu
+modules-right = wlan netspeed rec eth memory pulseaudio backlight-acpi battery 
 
 tray-position = right
 tray-padding = 6
